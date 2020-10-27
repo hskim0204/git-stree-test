@@ -4,6 +4,8 @@
     <router-link to="/">홈으로</router-link>&nbsp;
     <router-link to="/test">테스트로</router-link>>&nbsp;
     <router-link to="/todoHome">할일리스트</router-link>
+    <router-link to="/login">로그인</router-link>
+    <router-link to="/board">게시판</router-link>
     <router-view></router-view>
   </div>
 </template>

@@ -1,18 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import Test from './Test.vue'
-import TodoHome from './components/Home.vue'
+import axios from 'axios'; //axios 호출
 
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import { router } from './router'
+import { store } from './store'
 
-Vue.use(Vuetify);
-
-Vue.use(VueRouter)
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
+Vue.prototype.$axios = axios; //전역변수로 설정 컴포넌트에서 this.$axios 호출할 수 있음
 
 export const eventBus = new Vue({
   methods : {
@@ -22,30 +20,9 @@ export const eventBus = new Vue({
   }
 })
 
-const router = new VueRouter({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: HelloWorld
-    },
-
-      {
-        path: '/todoHome',
-        name: 'todoHome',
-        component: TodoHome
-      },
-    {
-      path: '/test',
-      name: 'test',
-      component: Test
-    }
- ]
-});
-
 new Vue({
   vuetify : new Vuetify(),
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
