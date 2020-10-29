@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <router-link to="/">홈으로</router-link>&nbsp;
     <router-link to="/test">테스트로</router-link>>&nbsp;
     <router-link to="/todoHome">할일리스트</router-link>

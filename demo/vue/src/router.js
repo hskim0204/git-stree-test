@@ -16,7 +16,8 @@ export const router = new VueRouter({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      props: { msg : "test" }
     },
 
       {
@@ -27,7 +28,8 @@ export const router = new VueRouter({
     {
       path: '/test',
       name: 'test',
-      component: Test
+      component: Test,
+      props: { msg : "잘 모르겠음 ㅠ" }
     },
   {
     path: '/board',

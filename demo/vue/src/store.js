@@ -25,8 +25,8 @@ export default new Vuex.Store({
 
   },
   actions :{
-     login({state,commit},loginObj){
-       console.log(state,commit,loginObj)
+     login(loginObj){
+       console.log(loginObj)
      }
 
   }
